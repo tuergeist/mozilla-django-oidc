@@ -268,6 +268,8 @@ class OIDCAuthenticationBackend(ModelBackend):
 
         # Get the token
         token_info = self.get_token(token_payload)
+        LOGGER.info("Token information we got back: >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        LOGGER.info(token_info)
         id_token = token_info.get('id_token')
         access_token = token_info.get('access_token')
 
